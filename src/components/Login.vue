@@ -33,11 +33,11 @@ export default {
       loginRules: {
         username: [
           { required: true, message: '请输入登录名称', trigger: 'blur' },
-          { min: 3, max: 10, message: '长度在 3 到 10 个字符', trigger: 'blur' }
+          { min: 3, max: 10, message: '用户名长度在 3 到 10 个字符', trigger: 'blur' }
         ],
         password: [
-          { required: true, message: '请输入活动名称', trigger: 'blur' },
-          { min: 6, max: 15, message: '长度在 6 到 15 个字符', trigger: 'blur' }
+          { required: true, message: '请输入密码', trigger: 'blur' },
+          { min: 6, max: 15, message: '密码长度在 6 到 15 个字符', trigger: 'blur' }
         ]
       }
     }
@@ -55,10 +55,11 @@ export default {
         // 另一种请求方法
         // const {data:res} =await this.$http.post('login',this.loginForm);
         // if(res.meta.status !== 200) return console.log("登录失败");
-        this.$message.success('登录成功');
+        this.$message.success({message:"登录成功", duration: 1000});
         // 存储token到sessionStorage
-        window.sessionStorage.setItem('token',res.data.token);
+        window.sessionStorage.setItem('token',res.data.data.token);
         // 跳转到主页
+        console.log(res.data.data.token);
         this.$router.push('/home')
       })
     }
