@@ -11,7 +11,7 @@
       </el-header>
       <el-container>
         <el-aside :width="islong ? '64px' : '200px'">
-          <div class="togglebtn" @click="togglebtnclick">|||</div>
+          <div class="togglebtn" @click="togglebtnclick"><a href="javascript:;">~</a></div>
           <el-menu
             background-color="#545c64"
             text-color="#fff"
@@ -132,9 +132,18 @@ export default {
   width: 100%;
 }
 .togglebtn {
-  background-color: #585555;
+  background-color: #545c64;
   text-align: center;
   cursor: pointer;
   letter-spacing: 2px;
+  a{
+    text-decoration: none;
+    color: #000;
+  }
+  a:hover{
+    text-decoration: none;
+    background-color: #fff;
+    color: #000;
+  }
 }
 </style>

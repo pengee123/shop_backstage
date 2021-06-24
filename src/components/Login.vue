@@ -69,7 +69,7 @@ export default {
 
 <style lang="less" scoped>
 .login_contanier {
-  background-color: aquamarine;
+  background-color: #fff;
   height: 100%;
   .login_box {
     position: absolute;
@@ -78,6 +78,7 @@ export default {
     transform: translate(-50%, -60%);
     width: 450px;
     height: 300px;
+    border-radius: 5px;
     background-color: bisque;
     h1 {
       padding: 10px 0 0 0;
