@@ -3,19 +3,19 @@
     <!-- 面包屑导航 -->
     <el-breadcrumb separator-class="el-icon-arrow-right" class="nav">
       <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>活动管理</el-breadcrumb-item>
-      <el-breadcrumb-item>活动列表</el-breadcrumb-item>
+      <el-breadcrumb-item>数据统计</el-breadcrumb-item>
+      <el-breadcrumb-item>数据报表</el-breadcrumb-item>
     </el-breadcrumb>
     <!-- 卡片 -->
     <el-card class="box-card">
-        <span>首页</span>
+        <span>数据报表</span>
     </el-card>
   </div>
 </template>
 
 <script>
 export default {
-  name: "hellopage",
+  name: "categories",
 };
 </script>
 
